@@ -2,8 +2,8 @@
 node_modules
 .tmp
 npm-debug.log
-!/.devcontainer/
-!/.idea/
-!/.vscode/
-!/resources/
-!/target/
+.devcontainer
+.idea
+.vscode
+resources
+target
