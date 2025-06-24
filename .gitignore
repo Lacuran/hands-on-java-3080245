@@ -3,3 +3,7 @@ node_modules
 .tmp
 npm-debug.log
 target/*
+!/.devcontainer/
+!/.idea/
+!/.vscode/
+!/resources/
