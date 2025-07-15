@@ -20,6 +20,7 @@ public class Account {
         else {
             double newBalance = balance + amount;
             setBalance(newBalance);
+            DataSource.updateAccountBalance(id, newBalance);
         }
     }
 
