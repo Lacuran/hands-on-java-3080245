@@ -24,7 +24,16 @@ public class Account {
         }
     }
 
-    public void withdraw(double amount) {
-
+    public void withdraw(double amount) throws AmountException {
+        if (amount < 0) {
+            throw new AmountException("The amount of withdraw must be greater than 0.");
+        }
+        else if (amount > getBalance()){
+            throw new AmountException("Insufficient founds");
+        } else {
+            double newBalance = balance - amount;
+            setBalance(newBalance);
+            DataSource.updateAccountBalance(id, newBalance);
+        }
     }
 }
