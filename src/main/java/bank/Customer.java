@@ -1,16 +1,17 @@
 package bank;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class Customer {
-    private int id;
-    private String name;
-    private String username;
-    private String password;
-    private int accountId;
+    private final int id;
+    private final String name;
+    private final String username;
+    private final String password;
+    private final int accountId;
+    private boolean authenticated;
 }
